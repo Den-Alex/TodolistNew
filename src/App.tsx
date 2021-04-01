@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {TaskType, Todolist} from "./Todolist";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let tasks1: Array<TaskType> = [
+        { id: 1, title: "CSS", isDone: true},
+        { id: 1, title: "TS", isDone: true},
+        { id: 1, title: "React", isDone: false}
+    ]
+    let tasks2: Array<TaskType> = [
+        { id: 1, title: "TOR", isDone: true},
+        { id: 1, title: "Titanic", isDone: true},
+        { id: 1, title: "Help", isDone: false}
+    ]
+    return (
+        <div className="App">
+            <Todolist title="What to Learn" tasks={tasks1}/>
+            <Todolist title="Movies" tasks={tasks2}/>
+        </div>
+    );
 }
 
 export default App;
