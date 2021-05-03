@@ -2,7 +2,11 @@ import React, {useState} from 'react';
 import './App.css';
 import {Todolist} from './Todolist';
 import {v1} from 'uuid';
-
+type TaskType = {
+    id: string
+    title: string
+    isDone: boolean
+}
 export type FilterValuesType = "all" | "active" | "completed";
 export type TodolistType = {
     id: string
